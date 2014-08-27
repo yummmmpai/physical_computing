@@ -17,11 +17,13 @@ void loop() {
   if (buttonState == HIGH && locked == false) {
     buttonPress();
     locked = true;
+    Serial.println(locked); 
   } else if (buttonState == HIGH && locked == true){
     buttonPress();
     delay(100);
     buttonPress();
     locked = false; 
+    Serial.println(locked);
   }
   
 }
